@@ -32,5 +32,6 @@ class Song
       g_count[genre] = 0 if genre_count.keys.include?(genre)
       g_count[genre] += 1
     end
+    g_count
   end
 end
