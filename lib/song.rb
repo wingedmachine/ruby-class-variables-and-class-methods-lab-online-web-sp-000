@@ -29,7 +29,7 @@ class Song
   def genre_count
     g_count = {}
     @@genres.group_by do |genre|
-      g_count[genre] = 0 if genre_count.keys.include?(genre)
+      g_count[genre] = 0 if g_count.keys.include?(genre)
       g_count[genre] += 1
     end
     g_count
