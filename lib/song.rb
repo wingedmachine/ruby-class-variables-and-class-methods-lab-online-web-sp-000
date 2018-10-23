@@ -25,4 +25,12 @@ class Song
   def self.genres
     @@genres.uniq
   end
+
+  def genre_count
+    g_count = {}
+    @@genres.group_by do |genre|
+      g_count[genre] = 0 if genre_count.keys.include?(genre) 
+      g_count[genre] += 1
+    end
+  end
 end
