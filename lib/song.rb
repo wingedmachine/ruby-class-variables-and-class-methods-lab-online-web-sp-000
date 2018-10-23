@@ -34,4 +34,13 @@ class Song
     end
     g_count
   end
+
+  def self.artist_count
+    a_count = {}
+    @@genres.group_by do |artist|
+      a_count[artist] = 0 if !a_count.keys.include?(artist)
+      a_count[artist] += 1
+    end
+    a_count
+  end
 end
