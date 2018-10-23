@@ -37,7 +37,7 @@ class Song
 
   def self.artist_count
     a_count = {}
-    @@genres.group_by do |artist|
+    @@artists.group_by do |artist|
       a_count[artist] = 0 if !a_count.keys.include?(artist)
       a_count[artist] += 1
     end
